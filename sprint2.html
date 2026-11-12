@@ -1,0 +1,856 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sprint 2 | Onderzoek & AI-ontwikkeling</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="container navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">&lt;/&gt;</span> DEVLOG.
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="sprint1.html">Sprint 1</a>
+      <a href="sprint2.html" class="active">Sprint 2</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container article-page">
+
+  <!-- INTRODUCTIE -->
+
+  <div class="page-heading">
+    <span class="sprint-tag">SPRINT 02</span>
+
+    <h1>Onderzoek & AI-ontwikkeling</h1>
+
+    <p class="page-subtitle">
+      Van het vergelijken van AI-modellen tot het
+      programmeren en verbeteren van een werkende
+      LLM voor onze interactieve teddybeer.
+    </p>
+  </div>
+
+  <div class="summary-box">
+    <span class="eyebrow">SAMENVATTING</span>
+
+    <p>
+      Tijdens deze sprint heb ik onderzoek gedaan
+      naar verschillende AI-modellen en mijn
+      bevindingen vastgelegd in een researchdocument.
+      Ook heb ik meegewerkt aan het opstellen van
+      epics en user stories in GitLab.
+      Samen met Thayna heb ik vervolgens aan
+      de AI gewerkt, waarbij ik de LLM in Python
+      heb opgezet, getest en verbeterd.
+      Daarnaast heb ik bijgedragen aan de
+      voorbereiding voor Society 5.0.
+    </p>
+  </div>
+
+  <div class="article-layout">
+
+    <!-- INHOUDSOPGAVE -->
+
+    <aside class="sidebar">
+      <p class="sidebar-title">INHOUD</p>
+      <a href="#doel">Mijn doel</a>
+      <a href="#rol">Mijn rol</a>
+      <a href="#research">Researchdocument</a>
+      <a href="#userstories">User stories</a>
+      <a href="#ontwikkeling">LLM ontwikkelen</a>
+      <a href="#testen">Testen & problemen</a>
+      <a href="#memory">Memory & iteraties</a>
+      <a href="#gitlab">GitLab</a>
+      <a href="#resultaat">Resultaat</a>
+      <a href="#reflectie">Reflectie</a>
+    </aside>
+
+    <article class="article-content">
+
+      <!-- 01 DOEL -->
+
+      <section id="doel">
+        <span class="section-number">01 / DOEL</span>
+        <h2>Mijn doel</h2>
+
+        <p>
+          Tijdens deze sprint wilde ik onderzoeken
+          welke AI-modellen geschikt waren voor
+          ons prototype en vervolgens een werkende
+          LLM ontwikkelen.
+        </p>
+
+        <p>
+          Ons concept is een AI-companion in de vorm
+          van een teddybeer. Het doel is dat kinderen
+          vragen kunnen stellen en op een eenvoudige,
+          vriendelijke manier antwoord krijgen.
+        </p>
+
+        <p>
+          Voor mij was het belangrijk dat de AI niet
+          alleen technisch werkte, maar ook op een
+          manier reageerde die bij de teddybeer past.
+        </p>
+      </section>
+
+      <!-- 02 MIJN ROL -->
+
+      <section id="rol">
+        <span class="section-number">02 / MIJN BIJDRAGE</span>
+        <h2>Mijn rol binnen het project</h2>
+
+        <p>
+          Tijdens deze sprint hield ik me bezig met
+          het onderzoeken van AI-modellen, het
+          uitwerken van user stories en het
+          ontwikkelen van de LLM.
+        </p>
+
+        <p>
+          Samen met Thayna werkte ik aan het
+          AI-gedeelte van ons prototype.
+          Mijn bijdrage bestond onder andere uit
+          het schrijven en aanpassen van Python-code,
+          het testen van de antwoorden en het
+          toevoegen van nieuwe functionaliteiten.
+        </p>
+
+        <p>
+          Ook heb ik mijn wijzigingen vastgelegd
+          in GitLab, zodat we verder konden werken
+          met dezelfde versie van de code.
+        </p>
+      </section>
+
+      <!-- 03 RESEARCH -->
+
+      <section id="research">
+        <span class="section-number">03 / ONDERZOEK</span>
+        <h2>Mijn researchdocument</h2>
+
+        <p>
+          Voordat we begonnen met programmeren,
+          heb ik onderzoek gedaan naar verschillende
+          AI-modellen die we konden gebruiken
+          voor ons prototype.
+        </p>
+
+        <p>
+          Voor onze teddybeer hebben we drie
+          belangrijke onderdelen nodig:
+          Speech-to-Text, een Large Language Model
+          en Text-to-Speech.
+        </p>
+
+        <div class="research-grid">
+
+          <div class="research-card">
+            <span>01 / STT</span>
+            <h3>Speech-to-Text</h3>
+            <p>
+              Zet de gesproken vraag
+              van het kind om naar tekst.
+            </p>
+          </div>
+
+          <div class="research-card">
+            <span>02 / LLM</span>
+            <h3>Language Model</h3>
+            <p>
+              Verwerkt de vraag en
+              genereert een antwoord.
+            </p>
+          </div>
+
+          <div class="research-card">
+            <span>03 / TTS</span>
+            <h3>Text-to-Speech</h3>
+            <p>
+              Zet het gegenereerde
+              antwoord om naar spraak.
+            </p>
+          </div>
+
+        </div>
+
+        <h3>Waar heb ik op gelet?</h3>
+
+        <p>
+          Bij het vergelijken van de modellen
+          heb ik onder andere gekeken naar
+          snelheid, taalondersteuning en de
+          benodigde rekenkracht.
+        </p>
+
+        <p>
+          Omdat we de AI op onze eigen laptops
+          wilden testen, was het belangrijk
+          om rekening te houden met de
+          prestaties van de modellen.
+          Een model kan goede antwoorden geven,
+          maar als het te langzaam reageert,
+          is het minder geschikt voor een
+          interactieve teddybeer.
+        </p>
+
+        <p>
+          Mijn bevindingen heb ik verwerkt in
+          een Word-document. Dit gaf ons een
+          overzicht van de mogelijkheden en
+          hielp bij het maken van technische keuzes.
+        </p>
+
+        <a
+          href="documents/research.docx"
+          class="document-link"
+          download
+        >
+          Bekijk mijn researchdocument &rarr;
+        </a>
+      </section>
+
+      <!-- 04 USER STORIES -->
+
+      <section id="userstories">
+        <span class="section-number">04 / PLANNING</span>
+        <h2>Epics & user stories</h2>
+
+        <p>
+          Na het onderzoek hebben we in GitLab
+          epics en user stories opgesteld.
+          Hiermee konden we het werk opdelen
+          in kleinere taken en duidelijk
+          maken welke functionaliteiten
+          ontwikkeld moesten worden.
+        </p>
+
+        <p>
+          Een van onze belangrijkste epics was:
+          een kind moet een vraag kunnen stellen
+          aan de teddybeer en daarop een
+          antwoord krijgen.
+        </p>
+
+        <p>
+          Omdat hiervoor verschillende modellen
+          nodig zijn, hebben we deze epic
+          opgesplitst in drie user stories.
+        </p>
+
+        <div class="research-grid">
+
+          <div class="research-card">
+            <span>USER STORY 01</span>
+            <h3>STT</h3>
+            <p>
+              De gesproken vraag
+              omzetten naar tekst.
+            </p>
+          </div>
+
+          <div class="research-card">
+            <span>USER STORY 02</span>
+            <h3>LLM</h3>
+            <p>
+              De vraag verwerken
+              en antwoord genereren.
+            </p>
+          </div>
+
+          <div class="research-card">
+            <span>USER STORY 03</span>
+            <h3>TTS</h3>
+            <p>
+              Het antwoord omzetten
+              naar gesproken taal.
+            </p>
+          </div>
+
+        </div>
+
+        <p>
+          Daarnaast hebben we een tweede epic
+          opgesteld voor het testen en
+          vergelijken van verschillende
+          STT-, LLM- en TTS-modellen.
+        </p>
+
+        <p>
+          Ik heb meegewerkt aan het uitwerken
+          van de user stories met beschrijvingen,
+          taken en acceptance criteria.
+          Hierdoor werd duidelijker wanneer
+          een onderdeel als afgerond
+          beschouwd kon worden.
+        </p>
+
+        <p>
+          Deze manier van werken hielp ons
+          om de taken te verdelen en
+          overzicht te houden tijdens
+          de ontwikkeling.
+        </p>
+      </section>
+
+      <!-- 05 LLM ONTWIKKELING -->
+
+      <section id="ontwikkeling">
+        <span class="section-number">05 / ONTWIKKELING</span>
+        <h2>De LLM programmeren</h2>
+
+        <p>
+          Na het onderzoek ben ik samen met
+          Thayna aan de slag gegaan met het
+          ontwikkelen van de AI.
+          Voor de LLM heb ik gebruikgemaakt
+          van Ollama en het taalmodel
+          qwen3:4b-instruct.
+        </p>
+
+        <p>
+          Met Ollama kunnen we het model
+          lokaal uitvoeren en vanuit Python
+          vragen naar het model sturen.
+        </p>
+
+        <h3>De teddybeer een persoonlijkheid geven</h3>
+
+        <p>
+          Een belangrijk onderdeel van mijn
+          code is de system prompt.
+          Dit zijn instructies die bepalen
+          hoe het model zich moet gedragen.
+        </p>
+
+        <p>
+          Ik wilde dat de AI vriendelijk
+          reageerde, eenvoudige woorden
+          gebruikte en korte antwoorden gaf.
+          Daarom heb ik de volgende
+          instructies opgesteld.
+        </p>
+
+        <div class="code-example">
+          <div class="code-header">
+            <span>TEDDY_INSTRUCTIONS</span>
+            <span>PYTHON</span>
+          </div>
+
+          <pre><code>TEDDY_INSTRUCTIONS = """
+You are a friendly teddy bear talking to a child.
+Always respond in English.
+Use simple words and one or two short sentences.
+Do not use emojis or markdown.
+If you don't know something, say so.
+"""</code></pre>
+        </div>
+
+        <p>
+          Met deze instructies probeer ik
+          ervoor te zorgen dat de antwoorden
+          passen bij onze doelgroep.
+          Voor deze versie heb ik gekozen
+          voor Engelse antwoorden.
+        </p>
+
+        <h3>Communiceren met het taalmodel</h3>
+
+        <p>
+          Vervolgens heb ik een functie
+          gemaakt waarmee een vraag
+          naar het taalmodel wordt gestuurd.
+          De LLM genereert daarna een antwoord.
+        </p>
+
+        <div class="code-example">
+          <div class="code-header">
+            <span>ask_teddy()</span>
+            <span>PYTHON</span>
+          </div>
+
+          <pre><code>response = chat(
+    model="qwen3:4b-instruct",
+    messages=conversation,
+)
+
+answer = emoji.replace_emoji(
+    response.message.content, replace=""
+).strip()</code></pre>
+        </div>
+
+        <p>
+          De functie chat() stuurt het gesprek
+          naar het model. Vervolgens haal ik
+          het gegenereerde antwoord op en
+          verwijder ik eventuele emoji's.
+        </p>
+      </section>
+
+      <!-- 06 TESTEN -->
+
+      <section id="testen">
+        <span class="section-number">06 / EXPERIMENTEREN</span>
+        <h2>Testen & problemen oplossen</h2>
+
+        <p>
+          Nadat de eerste versie van de LLM
+          werkte, heb ik deze getest met
+          verschillende vragen.
+          Hierbij keek ik of het model
+          begrijpelijke antwoorden gaf
+          en zich aan de instructies hield.
+        </p>
+
+        <h3>Test 1: Gedrag van de teddybeer</h3>
+
+        <p>
+          Een van de vragen die ik gebruikte
+          om het gedrag van de AI te bekijken,
+          was wat de lievelingskleur
+          van de teddybeer is.
+        </p>
+
+        <div class="example-box">
+          <span class="example-label">
+            VOORBEELD / AI-ANTWOORD
+          </span>
+
+          <p>
+            <strong>You:</strong>
+            What is your favourite colour?
+          </p>
+
+          <p>
+            <strong>Teddy:</strong>
+            My favourite colour is pink!
+            It's soft and cuddly, just like me.
+          </p>
+        </div>
+
+        <p>
+          Dit antwoord past bij de persoonlijkheid
+          van de teddybeer. Het is kort,
+          vriendelijk en gebruikt eenvoudige taal.
+        </p>
+
+        <h3>Probleem 1: Emoji's in de antwoorden</h3>
+
+        <p>
+          Tijdens het testen merkte ik dat
+          het model soms emoji's toevoegde,
+          ook wanneer ik in de instructies
+          had aangegeven dat dit niet moest.
+        </p>
+
+        <p>
+          Omdat we de antwoorden uiteindelijk
+          willen laten uitspreken door een
+          Text-to-Speech-model, wilde ik
+          deze tekens verwijderen.
+        </p>
+
+        <p>
+          Daarom heb ik de Python-library
+          emoji toegevoegd. Hiermee worden
+          emoji's automatisch uit het
+          gegenereerde antwoord gefilterd.
+        </p>
+
+        <h3>Probleem 2: Geen gesprekscontext</h3>
+
+        <p>
+          Een ander probleem was dat
+          het model eerdere berichten
+          niet automatisch onthield.
+        </p>
+
+        <p>
+          Als een kind een vervolgvraag
+          stelde, had de LLM niet
+          altijd de informatie uit
+          het vorige bericht.
+        </p>
+
+        <p>
+          Daarom heb ik de code
+          uitgebreid met gespreksgeheugen.
+          Dit was een belangrijke
+          verbetering ten opzichte
+          van de eerste versie.
+        </p>
+      </section>
+
+      <!-- 07 MEMORY -->
+
+      <section id="memory">
+        <span class="section-number">07 / ITERATIES</span>
+        <h2>Gespreksgeheugen toevoegen</h2>
+
+        <p>
+          In de eerste versie kon de LLM
+          vragen beantwoorden, maar
+          werd de gespreksgeschiedenis
+          niet bijgehouden.
+        </p>
+
+        <p>
+          Om dit op te lossen heb ik
+          de Python-code aangepast.
+          Nu worden zowel de vragen
+          als de antwoorden opgeslagen
+          in een lijst met berichten.
+        </p>
+
+        <h3>Hoe werkt het?</h3>
+
+        <div class="code-example">
+          <div class="code-header">
+            <span>Conversation memory</span>
+            <span>PYTHON</span>
+          </div>
+
+          <pre><code>messages.extend([
+    {"role": "user", "content": question},
+    {"role": "assistant", "content": answer},
+])</code></pre>
+        </div>
+
+        <p>
+          Met messages.extend() voeg ik
+          de nieuwe vraag en het antwoord
+          toe aan de gespreksgeschiedenis.
+          Deze berichten worden bij
+          de volgende vraag opnieuw
+          meegestuurd naar het model.
+        </p>
+
+        <h3>Test 2: Gespreksgeheugen</h3>
+
+        <p>
+          Om deze functionaliteit te
+          controleren, kun je bijvoorbeeld
+          de volgende test uitvoeren.
+        </p>
+
+        <div class="example-box">
+          <span class="example-label">
+            VOORBEELD / MEMORY-TEST
+          </span>
+
+          <p>
+            <strong>You:</strong>
+            My name is Sara.
+          </p>
+
+          <p>
+            <strong>Teddy:</strong>
+            Nice to meet you, Sara!
+          </p>
+
+          <p>
+            <strong>You:</strong>
+            What is my name?
+          </p>
+
+          <p>
+            <strong>Teddy:</strong>
+            Your name is Sara!
+          </p>
+        </div>
+
+        <p>
+          Dit voorbeeld laat zien wat
+          het doel van gespreksgeheugen is:
+          de teddybeer kan informatie
+          uit eerdere berichten gebruiken
+          bij het beantwoorden van
+          vervolgvragen.
+        </p>
+
+        <h3>Een gesprek resetten</h3>
+
+        <p>
+          Naast gespreksgeheugen heb ik
+          ook een resetfunctie toegevoegd.
+          Hiermee kan een gebruiker
+          een nieuw gesprek beginnen
+          zonder de eerdere berichten.
+        </p>
+
+        <div class="code-example">
+          <div class="code-header">
+            <span>reset_conversation()</span>
+            <span>PYTHON</span>
+          </div>
+
+          <pre><code>def reset_conversation():
+    messages[:] = [
+        {"role": "system", "content": TEDDY_INSTRUCTIONS}
+    ]</code></pre>
+        </div>
+
+        <p>
+          Wanneer de gebruiker 'reset'
+          invoert, wordt de geschiedenis
+          gewist en blijven alleen de
+          oorspronkelijke instructies over.
+        </p>
+
+        <p>
+          Ook heb ik ervoor gezorgd
+          dat het programma kan worden
+          afgesloten met commando's
+          zoals 'bye', 'goodbye' of 'exit'.
+        </p>
+
+        <h3>Van eerste naar verbeterde versie</h3>
+
+        <div class="research-grid">
+
+          <div class="research-card">
+            <span>VERSIE 01</span>
+            <h3>Eerste versie</h3>
+            <p>
+              De LLM kon vragen beantwoorden,
+              maar onthield eerdere
+              berichten niet.
+            </p>
+          </div>
+
+          <div class="research-card">
+            <span>ITERATIE</span>
+            <h3>Aanpassing</h3>
+            <p>
+              Ik heb gespreksgeheugen
+              en een resetfunctie
+              toegevoegd.
+            </p>
+          </div>
+
+          <div class="research-card">
+            <span>VERSIE 02</span>
+            <h3>Verbeterde versie</h3>
+            <p>
+              De LLM kan rekening
+              houden met eerdere
+              berichten binnen
+              hetzelfde gesprek.
+            </p>
+          </div>
+
+        </div>
+
+        <p>
+          Het geheugen wordt in deze
+          versie alleen tijdens het
+          actieve programma bijgehouden.
+          Wanneer het programma opnieuw
+          wordt gestart, begint het
+          gesprek opnieuw.
+        </p>
+      </section>
+
+      <!-- 08 GITLAB -->
+
+      <section id="gitlab">
+        <span class="section-number">08 / DOCUMENTATIE</span>
+        <h2>GitLab & documentatie</h2>
+
+        <p>
+          Naast het programmeren
+          heb ik mijn wijzigingen
+          vastgelegd in GitLab.
+          Ik heb de code gecommit
+          en gepusht, zodat mijn
+          teamgenoot verder kon
+          werken met de nieuwste versie.
+        </p>
+
+        <p>
+          Ook heb ik de README
+          bijgewerkt met een korte
+          uitleg over de LLM.
+        </p>
+
+        <p>
+          Door deze wijzigingen
+          vast te leggen, bleef
+          het overzichtelijk
+          welke functionaliteiten
+          waren toegevoegd.
+        </p>
+      </section>
+
+
+      <!-- 10 RESULTAAT -->
+
+      <section id="resultaat">
+        <span class="section-number">9 / RESULTAAT</span>
+        <h2>Het eindresultaat</h2>
+
+        <p>
+          Aan het einde van
+          deze sprint hadden
+          Thayna en ik de
+          AI werkend gekregen.
+          De LLM kon vragen
+          beantwoorden en
+          eerdere berichten
+          binnen hetzelfde
+          gesprek gebruiken.
+        </p>
+
+        <p>
+          Daarnaast hadden we
+          onderzoek gedaan
+          naar de verschillende
+          AI-modellen en onze
+          taken uitgewerkt
+          in GitLab.
+        </p>
+
+        <p>
+          Het was fijn om
+          te zien dat mijn
+          werk echt iets
+          bijdroeg aan ons
+          prototype voor
+          Society 5.0.
+        </p>
+      </section>
+
+      <!-- 11 REFLECTIE -->
+
+      <section id="reflectie">
+        <span class="section-number">10 / REFLECTIE</span>
+        <h2>Mijn reflectie</h2>
+
+        <p>
+          Deze sprint vond
+          ik het leuk om
+          samen met Thayna
+          aan de AI te werken.
+          Vooral het moment
+          waarop de LLM
+          goed begon te
+          reageren, vond
+          ik leuk om te zien.
+        </p>
+
+        <p>
+          Tijdens het
+          programmeren merkte
+          ik dat het werkend
+          krijgen van een
+          taalmodel pas de
+          eerste stap is.
+          Daarna moet je
+          nog testen hoe
+          het model reageert,
+          welke instructies
+          goed werken en
+          hoe je ervoor
+          zorgt dat het
+          een natuurlijk
+          gesprek kan voeren.
+        </p>
+
+        <p>
+          Door de problemen
+          met emoji's en
+          gespreksgeheugen
+          op te lossen,
+          kreeg ik een
+          beter beeld van
+          hoe belangrijk
+          testen en verbeteren
+          is tijdens het
+          ontwikkelen.
+        </p>
+
+        <p>
+          Ik vond het ook
+          interessant om te
+          zien hoe de technische
+          kant van ons project
+          aansluit op de
+          ethische vragen
+          die we eerder
+          hadden onderzocht.
+        </p>
+
+        <p>
+          We willen een
+          teddybeer maken
+          die vriendelijk
+          reageert en
+          kinderen helpt,
+          maar tegelijkertijd
+          moeten we nadenken
+          over de invloed
+          die zo'n AI
+          kan hebben.
+        </p>
+
+        <p>
+          Wat ik de volgende
+          keer beter wil doen,
+          is vaker tussendoor
+          updates geven aan
+          mijn team.
+          Bijvoorbeeld via
+          Teams of GitLab
+          wanneer ik nog
+          ergens mee bezig
+          ben, in plaats
+          van pas wanneer
+          ik een taak
+          helemaal heb
+          afgerond.
+        </p>
+
+        <p>
+          Deze sprint heeft
+          mij laten zien
+          hoe onderzoek,
+          programmeren en
+          samenwerken samenkomen
+          bij het ontwikkelen
+          van een prototype.
+          Ik ben blij dat
+          mijn bijdrage
+          ook echt terug
+          te zien was in
+          het eindresultaat.
+        </p>
+      </section>
+
+      <a href="index.html" class="next-sprint">
+        <span>TERUG NAAR</span>
+        <strong>Sprintoverzicht &rarr;</strong>
+      </a>
+
+    </article>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>DEVLOG.</span>
+    <span>Dark Tech</span>
+  </div>
+</footer>
+
+</body>
+</html>
